@@ -11,6 +11,7 @@ function App() {
   
   <Router>
     <Routes>
+      <Route path="/*" element={<List/>}/>
       <Route path="/add" element={<Add/>} />
       <Route path="/list" element={<List/>}/>
       <Route path="/edit" element={<Edit/>}/>
