@@ -12,12 +12,12 @@ const [apiData,setApiData]=useState([])
 const navigate=useNavigate()
 const navigation=useNavigate()
 
-const updateUser= ({produceName,priceName,oldPrice,categoryType,active,description,id})=>{
+const updateUser= ({productName,priceName,oldPrice,catagoryType,active,description,id})=>{
 localStorage.setItem("id",id)
-localStorage.setItem("produceName",produceName)
+localStorage.setItem("productName",productName)
 localStorage.setItem("priceName",priceName)
 localStorage.setItem("oldPrice",oldPrice)
-localStorage.setItem("categoryType",categoryType)
+localStorage.setItem("catagoryType",catagoryType)
 localStorage.setItem("active",active)
 localStorage.setItem("description",description)
 navigate("/edit")
@@ -59,13 +59,14 @@ useEffect(()=>{
   <Table striped bordered hover size="sm">
       <thead>
         <tr>
-          
+          <th>S:No</th>
           <th>productName</th>
           <th>Price</th>
           <th>oldPrice</th>
           <th>categoryType</th>
           <th>Active</th>
           <th>Description</th>
+          <th>Actions</th>
 
 
           
@@ -76,6 +77,7 @@ useEffect(()=>{
         apiData.map((data,i)=>{
           return(
             <tr key={i}>
+              <td>{i+1}</td>
              <td>{data.productName}</td>
              <td>{data.priceName}</td>
              <td>{data.oldPrice}</td>

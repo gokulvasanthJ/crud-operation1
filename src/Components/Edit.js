@@ -64,8 +64,10 @@ useEffect(() => {
         <Form.Control value={oldPrice} onChange={event=>setOldPrice(event.target.value)} type="LastName" placeholder="oldPrice" /><br/>
         <Form.Label>catagoryType</Form.Label>
         <Form.Control value={catagoryType} onChange={event=>setCatagoryType(event.target.value)} type="LastName" placeholder="Category" /><br/>
-        <Form.Label>active</Form.Label>
-        <Form.Control value={active} onChange={event=>setActive(event.target.value)} type="LastName" placeholder="Active" /><br/>
+        <Form.Check 
+        type="switch"
+        id="custom-switch"
+        label="active" onChange={event=>setActive()}></Form.Check>
         <Form.Label>description</Form.Label>
         <Form.Control value={description} onChange={event=>setDescription(event.target.value)} type="LastName" placeholder="Description" /><br/>
         
